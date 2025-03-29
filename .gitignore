@@ -1,0 +1,34 @@
+# Binaries
+/bin/
+/fileshare
+
+# Environment files
+.env
+*.env
+
+# IDE files
+.idea/
+.vscode/
+
+# Dependency directories
+vendor/
+
+# Local storage
+/uploads/
+
+# Build output
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output directories
+out/
+dist/
+
+# Go workspace file
+go.work
