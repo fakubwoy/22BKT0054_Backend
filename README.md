@@ -1,21 +1,17 @@
-# Go File Share Platform 🚀
+# Go File Share Platform 
 
 A secure, high-performance file-sharing platform built with Go, PostgreSQL, and Redis. Supports user authentication, file uploads, sharing links, and metadata search.
 
-![Go](https://img.shields.io/badge/Go-1.21+-00ADD8?logo=go)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-4169E1?logo=postgresql)
-![Redis](https://img.shields.io/badge/Redis-7+-DC382D?logo=redis)
+## Features 
 
-## Features ✨
+-  JWT Authentication (Register/Login)
+-  File Uploads (S3 or Local Storage)
+-  Shareable Links with Expiration
+-  Redis Caching for Metadata
+-  Search Files by Name/Type
+-  Background Cleanup Worker
 
-- 🔒 JWT Authentication (Register/Login)
-- 📁 File Uploads (S3 or Local Storage)
-- 🔗 Shareable Links with Expiration
-- ⚡ Redis Caching for Metadata
-- 🔍 Search Files by Name/Type
-- 🧹 Background Cleanup Worker
-
-## Tech Stack 🛠️
+## Tech Stack 
 
 | Component      | Technology                |
 |----------------|---------------------------|
@@ -25,14 +21,14 @@ A secure, high-performance file-sharing platform built with Go, PostgreSQL, and 
 | Storage        | AWS S3 / Local Filesystem |
 | Authentication | JWT                       |
 
-## Prerequisites 📋
+## Prerequisites 
 
 - Go 1.21+
 - PostgreSQL 15+
 - Redis 7+
 - AWS CLI (for S3 - optional)
 
-## Setup Guide 🛠️
+## Setup Guide 
 
 ### 1. Clone Repository
 ```bash
@@ -71,10 +67,8 @@ sudo -u postgres psql -d fileshare -f migrations/001_init_schema.up.sql
 
 ### 5. Start Services
 ```bash
-# Start Redis
 sudo systemctl start redis-server
 
-# Start PostgreSQL
 sudo systemctl start postgresql
 ```
 
@@ -103,7 +97,6 @@ docker-compose up --build
 
 ### AWS EC2
 ```bash
-# Install dependencies
 sudo apt update && sudo apt install -y golang postgresql redis
 
 go build -o fileshare cmd/main.go
